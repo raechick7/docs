@@ -1,0 +1,114 @@
+---
+title: "Troubleshoot Common Elliott Strategies Issues"
+sidebarTitle: "Troubleshooting"
+description: "Step-by-step fixes for the most common issues in Elliott Strategies, covering login problems, permission errors, and integration sync failures."
+---
+
+Most issues in Elliott Strategies have a straightforward fix — this guide walks you through the most common ones. Each section describes the symptom, explains the likely cause, and gives you a clear resolution path. If you work through the steps and the problem persists, our support team is ready to help.
+
+<Tip>
+  Before diving into a specific issue, try clearing your browser cache and performing a hard refresh (`Ctrl + Shift + R` on Windows/Linux, `Cmd + Shift + R` on Mac). Stale cached assets cause a surprising number of display and behavior problems, and a fresh load resolves them instantly.
+</Tip>
+
+---
+
+<Accordion title="I didn't receive my verification email">
+  **Symptom:** You signed up for Elliott Strategies or changed your email address, but the verification email never arrived.
+
+  **Likely cause:** The email was filtered into spam or junk, delivery was delayed by your email provider, or the address was entered with a typo.
+
+  **Resolution:**
+
+  1. Check your **Spam**, **Junk**, or **Promotions** folder for an email from `no-reply@elliottstrategies.com`.
+  2. If you find it there, mark it as Not Spam and click the verification link.
+  3. If it's not in any folder, return to the Elliott Strategies login page and click **Resend Verification Email**.
+  4. Wait up to 5 minutes. If it still doesn't arrive, confirm the email address on your account is spelled correctly under **Settings → Profile**.
+  5. Ask your IT administrator to whitelist the domain `elliottstrategies.com` if your organization uses strict email filtering.
+
+  **Contact support if:** You've verified the address is correct and still haven't received the email after two resend attempts.
+</Accordion>
+
+<Accordion title="I can't see a strategy that a teammate created">
+  **Symptom:** A colleague tells you they've created or shared a strategy with you, but it doesn't appear in your workspace dashboard.
+
+  **Likely cause:** The strategy has not been shared with your role or user, you have a **Member** role with restricted view access, or the strategy is still in **Draft** status and only visible to its owner and Admins.
+
+  **Resolution:**
+
+  1. Ask your teammate to confirm they clicked **Save** and that the strategy's visibility is set to **Team** (not **Private**). They can check this under the strategy's **Settings** tab.
+  2. Confirm your workspace role with an Admin. If you have a **Member** role, you can only see published strategies that have been explicitly shared with you.
+  3. Try refreshing your browser — if the strategy was shared moments ago, your view may not have updated yet.
+  4. Check the **Archived** strategies view (**Strategies → Archived**) in case the strategy was accidentally archived.
+  5. Ask an Admin to verify your name appears on the strategy's **Access** list.
+
+  **Contact support if:** Your role is Contributor or higher, the strategy is published and set to Team visibility, and you still cannot see it.
+</Accordion>
+
+<Accordion title="My metric values aren't syncing from Google Sheets">
+  **Symptom:** You've connected Google Sheets and mapped columns to your metrics, but the values in Elliott Strategies haven't updated to reflect changes in the spreadsheet.
+
+  **Likely cause:** The sync schedule hasn't run yet, the Google account authorization has expired, the spreadsheet column mapping has changed, or the Google Sheet is in a folder the connected account can't access.
+
+  **Resolution:**
+
+  1. Go to **Settings → Integrations → Google Sheets** and check the **Last Synced** timestamp. If it's recent, the data in Elliott Strategies is current — verify that you're looking at the correct metric.
+  2. Click **Sync Now** to trigger an immediate manual sync and watch for any error messages.
+  3. If you see an authentication error, click **Reconnect** and re-authorize your Google account. Tokens expire periodically and need to be refreshed.
+  4. Open the column mapping configuration and confirm the column headers in the spreadsheet match exactly what was mapped — including spacing and capitalization.
+  5. Ensure the Google account used to authorize the integration has at least **Viewer** access to the spreadsheet.
+
+  **Contact support if:** You've re-authorized successfully, the mapping looks correct, and manual syncs still return errors.
+</Accordion>
+
+<Accordion title="I'm getting a permission error when trying to edit">
+  **Symptom:** When you click **Edit** on a strategy, initiative, or metric, you see a message like *"You don't have permission to edit this item."*
+
+  **Likely cause:** Your workspace role doesn't grant edit access, you're trying to edit an item owned by someone else without sufficient privileges, or the strategy has been locked by an Admin.
+
+  **Resolution:**
+
+  1. Check your workspace role by going to **Settings → Team Members** and finding your name. Edit access requires the **Contributor** role or higher.
+  2. If your role is Contributor but you're editing someone else's initiative, ask an Admin — Contributors can only edit items they own unless an Admin has granted broader access.
+  3. Check whether the strategy is in a **Locked** state. A padlock icon on the strategy header indicates it has been locked by an Admin to prevent edits. Ask the Admin to unlock it.
+  4. Log out of Elliott Strategies and log back in to refresh your permissions, especially if your role was recently changed.
+
+  **Contact support if:** Your role is Admin and you're still seeing permission errors.
+</Accordion>
+
+<Accordion title="The dashboard is showing stale data">
+  **Symptom:** Your strategy dashboard displays metric values, progress percentages, or status indicators that appear outdated — they don't reflect changes you or your team made recently.
+
+  **Likely cause:** Your browser is serving a cached version of the page, the dashboard's data refresh cycle hasn't run yet, or a synced data source (like Google Sheets) has a delayed update.
+
+  **Resolution:**
+
+  1. Perform a hard refresh: press `Ctrl + Shift + R` (Windows/Linux) or `Cmd + Shift + R` (Mac) to bypass the browser cache and reload live data.
+  2. If the issue persists, clear your browser's cache and cookies entirely: go to your browser settings, clear browsing data for the past 24 hours, and reload Elliott Strategies.
+  3. Check the **Last Updated** timestamp shown at the bottom of each dashboard widget. If it's recent, the data is current — confirm the underlying metric values were actually saved by viewing the metric detail page.
+  4. For metrics synced from Google Sheets or another integration, go to **Settings → Integrations** and trigger a manual sync by clicking **Sync Now**.
+  5. Try opening the dashboard in an incognito or private browsing window to rule out extension conflicts.
+
+  **Contact support if:** The hard refresh and cache clear don't resolve the issue and the **Last Updated** timestamp is more than 24 hours old.
+</Accordion>
+
+<Accordion title="My Slack notifications stopped working">
+  **Symptom:** Slack notifications from Elliott Strategies stopped appearing in your channel, even though the integration was working previously and your notification preferences are still enabled.
+
+  **Likely cause:** The Slack bot was removed from the channel, the connected Slack workspace's OAuth token expired or was revoked, the notification toggle for the affected event type was turned off, or the Slack channel was renamed or deleted.
+
+  **Resolution:**
+
+  1. Go to **Settings → Integrations → Slack** and check the connection status. If it shows **Error** or **Disconnected**, click **Reconnect** and re-authorize with Slack.
+  2. In Slack, navigate to the channel where notifications should appear and type `/apps`. Confirm that the **Elliott Strategies** app is listed as a member of the channel. If not, add it with `/invite @Elliott Strategies`.
+  3. Go to **Settings → Notifications** in Elliott Strategies and confirm that the relevant event toggles are still **On** and that the Slack delivery option is selected (not just email).
+  4. If the channel was renamed, return to the Slack integration settings in Elliott Strategies, update the channel name to match the new one, and save.
+  5. Ask your Slack workspace administrator to confirm the Elliott Strategies app hasn't been restricted or removed from the Slack workspace.
+
+  **Contact support if:** The integration shows Connected, the app is in the channel, all toggles are on, and notifications are still not arriving.
+</Accordion>
+
+---
+
+<Note>
+  If you've worked through the steps above and are still experiencing an issue, contact our support team at **support@elliottstrategies.com**. Include your workspace name, a description of the problem, any error messages you see, and the steps you've already tried — this helps us resolve your issue as quickly as possible.
+</Note>

@@ -1,0 +1,65 @@
+---
+title: "Connect Elliott Strategies to Your Existing Tools"
+sidebarTitle: "Integrations"
+description: "Link Elliott Strategies to the tools your team already uses to sync metric data, surface real-time updates, and keep workflows connected."
+---
+
+Integrations let you bring Elliott Strategies into the daily rhythm of your organization — without asking your team to change how they work. By connecting the platforms you already rely on, you can automatically sync metric data, receive strategy updates in the channels your teams monitor, and link execution work directly to the initiatives that drive it. All integrations are managed from a single place: **Settings → Integrations**.
+
+---
+
+## Available Integrations
+
+<CardGroup cols={2}>
+  <Card title="Slack" icon="slack">
+    Receive real-time strategy updates, milestone alerts, and metric-threshold notifications directly in your Slack channels. Pin strategy digests to dedicated channels so your whole team stays aligned without switching tools.
+  </Card>
+  <Card title="Google Sheets" icon="table">
+    Sync metric values from any Google Sheet directly into Elliott Strategies on a schedule you control. Eliminate manual data entry by mapping spreadsheet columns to your tracked metrics and letting the platform update them automatically.
+  </Card>
+  <Card title="Jira" icon="jira">
+    Link Elliott Strategies initiatives to Jira epics and projects so execution-level progress rolls up into your strategic view. When a Jira epic moves to Done, the connected initiative reflects the update in real time.
+  </Card>
+  <Card title="Microsoft Teams" icon="microsoft">
+    Get strategy notifications and weekly digest messages posted directly into Microsoft Teams channels or personal chats. Ideal for organizations already standardized on the Microsoft 365 suite.
+  </Card>
+</CardGroup>
+
+---
+
+## Connecting an Integration
+
+<Note>
+  Setting up or removing an integration requires the **Admin** role. Members and Contributors can view which integrations are active but cannot modify them. Ask your Workspace Owner or an Admin to complete the steps below.
+</Note>
+
+<Steps>
+  <Step title="Open the Integrations page">
+    Go to **Settings** in the left sidebar, then click **Integrations** in the settings navigation.
+  </Step>
+  <Step title="Find the integration you want">
+    Browse the integration catalog or use the search bar to find the tool you want to connect. Each tile shows the current connection status — **Not Connected**, **Connected**, or **Error**.
+  </Step>
+  <Step title="Click Connect">
+    Click the **Connect** button on the integration tile. A setup panel slides in from the right side of the screen with configuration options specific to that integration.
+  </Step>
+  <Step title="Authenticate with the third-party service">
+    Click **Authorize** to open the third-party authentication flow in a new window. Sign in with your credentials for that service and grant the requested permissions. You'll be redirected back to Elliott Strategies automatically once authorization is complete.
+  </Step>
+  <Step title="Configure sync settings">
+    Depending on the integration, you'll be prompted to choose channels, workspaces, projects, or spreadsheet ranges to connect. Select the options that match your setup. For scheduled syncs (like Google Sheets), choose the update frequency — hourly, daily, or on-demand.
+  </Step>
+  <Step title="Save and verify the connection">
+    Click **Save Integration**. Elliott Strategies runs a quick connection test and displays a green **Connected** badge on the tile if everything is working. If the test fails, an inline error message explains what to check.
+  </Step>
+</Steps>
+
+---
+
+## Disconnecting an Integration
+
+To remove an integration, click its tile in the catalog, scroll to the bottom of the configuration panel, and click **Disconnect**. Disconnecting immediately revokes Elliott Strategies' access to the third-party service and stops all syncs and notifications from that source. Historical data already imported is not deleted.
+
+<Tip>
+  Use the **Google Sheets** integration to automate metric updates for KPIs that your finance or operations team already tracks in spreadsheets. Map each column header to a corresponding metric in Elliott Strategies, set a daily sync schedule, and your dashboards will always reflect the latest numbers — no manual entry required.
+</Tip>

@@ -1,0 +1,69 @@
+{
+  "projectType": "saas",
+  "projectName": "Elliott Strategies",
+  "projectDescription": "Elliott Strategies is a strategic advisory and platform solution that helps organizations plan, execute, and track business strategies with clarity and confidence.",
+  "theme": "almond",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "get-started/account-setup"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/overview",
+              "concepts/strategies",
+              "concepts/initiatives",
+              "concepts/metrics"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/creating-a-strategy",
+              "guides/tracking-progress",
+              "guides/collaboration",
+              "guides/reporting"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/settings",
+              "configuration/integrations",
+              "configuration/notifications"
+            ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "support/faq",
+              "support/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Strategy planning and roadmapping",
+    "Initiative and milestone tracking",
+    "KPI and metrics dashboards",
+    "Team collaboration and assignments",
+    "Progress reporting and exports",
+    "Third-party integrations",
+    "Customizable notifications and alerts"
+  ],
+  "publicApiSurface": []
+}
